@@ -14,15 +14,15 @@ npm i
 
 npm run build
 
-docker build -t arziburst/cinemator-backend .
+docker build -t arziburst/gohard-backend .
 
-docker push arziburst/cinemator-backend
+docker push arziburst/gohard-backend
 
 <!-- droplet -->
 
-docker pull arziburst/cinemator-backend
+docker pull arziburst/gohard-backend
 
-docker tag arziburst/cinemator-backend dokku/api
+docker tag arziburst/gohard-backend dokku/api
 
 dokku tags:deploy api
 
@@ -30,6 +30,7 @@ dokku tags:deploy api
 dokku [module]:[report|help] 
 
 sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git postgres
+
 sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git 
 
 dokku postgres:create db
