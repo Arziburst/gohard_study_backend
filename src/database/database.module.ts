@@ -18,7 +18,7 @@ import { Todo } from '../bus/Todo/todo.entity';
                     type:        'postgres',
                     url:         configService.get('DATABASE_URL'),
                     dropSchema:  !isProd && false,
-                    synchronize: !isProd && false,
+                    synchronize: true,
                     logging:     !isProd && false,
                     entities:    [ Todo ],
                     migrations:  [ 'src/migration/**/*.ts' ],
