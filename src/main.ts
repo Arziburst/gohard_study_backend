@@ -28,6 +28,7 @@ async function bootstrap() {
         origin: [
             'http://localhost',
             'http://localhost:3000', // dev
+            'http://localhost:5500', // dev
             'https://gohardstudy.gq', // prod
         ],
         credentials: true,
