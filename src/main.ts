@@ -4,7 +4,6 @@ import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { ConfigService } from '@nestjs/config';
 import cookieParser from 'cookie-parser';
-import bodyParser from 'body-parser';
 
 // App
 import { AppModule } from './app.module';
@@ -21,8 +20,6 @@ async function bootstrap() {
 
     app.set('trust proxy', 1);
     app.use(cookieParser());
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: true }));
     app.useGlobalPipes(new ValidationPipe());
     app.enableCors({
         origin: [

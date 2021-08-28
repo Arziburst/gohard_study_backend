@@ -332,7 +332,7 @@ rules:
     babel/new-cap: 0
 
         # TypeScript
-    "@typescript-eslint/no-unused-vars": 2
+    "@typescript-eslint/no-unused-vars": 1
     "@typescript-eslint/indent":
     - 2
     - 4

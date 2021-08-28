@@ -7,7 +7,6 @@
     "scripts": {
         "prebuild": "rimraf dist",
         "build": "nest build",
-        "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "start": "nest start --watch",
         "start:debug": "nest start --debug --watch",
         "start:prod": "node dist/main",
@@ -16,30 +15,25 @@
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
         "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-        "test:e2e": "jest --config ./test/jest-e2e.json",
-        "migration:gen": "ts-node ./node_modules/typeorm/cli.js migration:generate -n",
-        "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run"
+        "test:e2e": "jest --config ./test/jest-e2e.json"
     },
     "dependencies": {
         "@nestjs/common": "^7.0.13",
         "@nestjs/config": "^0.5.0",
         "@nestjs/core": "^7.0.13",
-        "@nestjs/graphql": "^7.6.0",
+        "@nestjs/mongoose": "^8.0.1",
         "@nestjs/platform-express": "^7.4.2",
-        "@nestjs/typeorm": "^7.0.0",
-        "apollo-server-express": "^2.13.1",
         "bcryptjs": "^2.4.3",
         "class-transformer": "^0.2.3",
         "class-validator": "^0.11.1",
         "cookie-parser": "^1.4.5",
-        "graphql": "^14.5.8",
         "jsonwebtoken": "^8.5.1",
         "lodash": "^4.17.20",
-        "pg": "^7.18.2",
+        "mongoose": "^6.0.2",
+        "mongoose-autopopulate": "^0.14.0",
         "reflect-metadata": "^0.1.10",
         "rimraf": "^3.0.2",
-        "rxjs": "^6.5.5",
-        "typeorm": "^0.2.24"
+        "rxjs": "^7.3.0"
     },
     "devDependencies": {
         "@nestjs/cli": "^7.1.5",
