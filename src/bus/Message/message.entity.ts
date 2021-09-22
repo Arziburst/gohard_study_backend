@@ -3,10 +3,19 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-@Schema()
+@Schema({
+    timestamps: {
+        createdAt: true,
+        updatedAt: true,
+    },
+    versionKey: false,
+})
 export class Message {
-    @Prop()
+    @Prop({ required: true })
     text: string;
+
+    @Prop({ required: true })
+    user: string;
 }
 
 export type MessageDocument = Message & Document;

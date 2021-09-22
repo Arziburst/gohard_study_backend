@@ -81,6 +81,20 @@ export class MessageController {
 
     // ================================================================================================================
 
+    @Delete('/drop')
+    @HttpCode(HttpStatus.OK)
+    async dropMessageCollection(): Promise<Boolean> {
+        const result = await this.messageService.dropCollection();
+
+        if (!result) {
+            throw new BadRequestException('drop message collection failed');
+        }
+
+        return true;
+    }
+
+    // ================================================================================================================
+
     @Delete('/:messageId')
     @HttpCode(HttpStatus.OK)
     async deleteMessage(

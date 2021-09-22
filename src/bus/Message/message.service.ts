@@ -54,4 +54,16 @@ export class MessageService {
             return false;
         }
     }
+
+    // ================================================================================================================
+
+    async dropCollection(): Promise<boolean> {
+        try {
+            await this.messageModel.collection.drop();
+
+            return true;
+        } catch (error) {
+            return false;
+        }
+    }
 }

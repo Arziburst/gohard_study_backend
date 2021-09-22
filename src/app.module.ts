@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 // Modules
 import { DatabaseModule } from './tools/database/database.module';
 import { MessageModule } from './bus/Message/message.module';
+import { UserModule } from './bus/User/user.module';
 
 // Middlewares
 import { AppLoggerMiddleware } from './tools/middlewares/AppLoggerMiddleware';
@@ -14,6 +15,7 @@ import { AppLoggerMiddleware } from './tools/middlewares/AppLoggerMiddleware';
         ConfigModule.forRoot(),
         DatabaseModule,
         MessageModule,
+        UserModule,
     ],
 })
 export class AppModule implements NestModule {

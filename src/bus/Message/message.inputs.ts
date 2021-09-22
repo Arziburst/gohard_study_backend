@@ -4,6 +4,9 @@ import { IsString } from 'class-validator';
 export class MessageCreateInput {
     @IsString()
     text: string;
+
+    @IsString()
+    user: string;
 }
 
 
