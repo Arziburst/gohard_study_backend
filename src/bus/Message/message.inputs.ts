@@ -6,7 +6,7 @@ export class MessageCreateInput {
     text: string;
 
     @IsString()
-    user: string;
+    username: string;
 }
 
 

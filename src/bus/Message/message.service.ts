@@ -22,7 +22,9 @@ export class MessageService {
     // ================================================================================================================
 
     async findAll(): Promise<Message[]> {
-        return await this.messageModel.find();
+        const messages = await this.messageModel.find().sort({ _id: 1 }).limit(50);
+        
+        return messages
     }
 
     // ================================================================================================================

@@ -15,7 +15,7 @@ export class Message {
     text: string;
 
     @Prop({ required: true })
-    user: string;
+    username: string;
 }
 
 export type MessageDocument = Message & Document;

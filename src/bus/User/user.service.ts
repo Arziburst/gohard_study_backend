@@ -22,21 +22,21 @@ export class UserService {
     // ================================================================================================================
 
     async findAll(): Promise<User[]> {
-        return await this.userModel.find().select('-password');
+        return await this.userModel.find();
     }
 
     // ================================================================================================================
 
     async findById(userId: string): Promise<User | null> {
-        const user = await this.userModel.findById(userId).select('-password');
+        const user = await this.userModel.findById(userId);
 
         return user;
     }
 
     // ================================================================================================================
 
-    async findOneByCredentials({ username, password }: UserLoginInput): Promise<User | null> {
-        const user = await this.userModel.findOne({ username, password }).select('-password');
+    async findOneByCredentials({ username }: UserLoginInput): Promise<User | null> {
+        const user = await this.userModel.findOne({ username });
 
         return user;
     }
@@ -44,7 +44,7 @@ export class UserService {
     // ================================================================================================================
 
     async updateOne(userId: string, body: UserUpdateInput): Promise<User | null> {
-        return await this.userModel.findByIdAndUpdate(userId, body, { new: true }).select('-password');
+        return await this.userModel.findByIdAndUpdate(userId, body, { new: true });
     }
 
     // ================================================================================================================
