@@ -27,7 +27,7 @@ async function bootstrap() {
             'http://localhost:3000', // dev
             'http://localhost:5000', // dev
             'http://localhost:5500', // dev
-            'https://gohardstudy.gq', // prod
+            'https://barbarossa.pp.ua', // prod
         ],
         credentials: true,
     });
