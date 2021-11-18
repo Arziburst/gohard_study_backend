@@ -28,6 +28,16 @@ async function bootstrap() {
             'http://localhost:5000', // dev
             'http://localhost:5500', // dev
             'https://barbarossa.pp.ua', // prod
+            'https://krisskrass.pp.ua',
+            'http://krisskrass.pp.ua',
+            'https://konstantin-sgn.pp.ua',
+            'http://konstantin-sgn.pp.ua',
+            'https://chathost.pp.ua',
+            'http://chathost.pp.ua',
+            'http://belartale-online-chat.pp.ua',
+            'https://belartale-online-chat.pp.ua',
+            'http://tbikobka.pp.ua',
+            'https://tbikobka.pp.ua',
         ],
         credentials: true,
     });

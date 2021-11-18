@@ -43,7 +43,7 @@ export class MessageController {
     async messages(): Promise<Message[]> {
         const messages = await this.messageService.findAll();
 
-        return messages.reverse();
+        return messages;
     }
 
     // ================================================================================================================
